@@ -66,6 +66,8 @@ public class UserConsoleOperations {
 
     private void signUp() {
         System.out.println("\nСейчас будем регистрировать пользователя...");
+        System.out.print("Введите имя: ");
+        String name = scanner.nextLine();
         System.out.print("Введите email: ");
         String email = scanner.nextLine();
         System.out.print("Введите password: ");
@@ -73,7 +75,7 @@ public class UserConsoleOperations {
         System.out.print("Введите описание профиля: ");
         String profileDescription = scanner.nextLine();
 
-        userService.signUp(email, password, profileDescription);
+        userService.signUp(name, email, password, profileDescription);
     }
 
 

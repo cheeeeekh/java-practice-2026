@@ -1,6 +1,7 @@
-package ru.itis.shop.user.infrastructure.persistence;
+package ru.itis.shop.user.infrastructure.persistence.file;
 
 import ru.itis.shop.user.domain.User;
+import ru.itis.shop.user.infrastructure.persistence.file.mapper.UserMapper;
 import ru.itis.shop.user.repository.UserRepository;
 
 import java.io.*;

@@ -1,2 +1,3 @@
-e04d8135-bf9c-4d39-a33f-536147fa146a|Roman|roman@gmail.com|qwerty008|Student
-70fabe4e-d1a6-426e-92ed-2ea6ae67e15c|Marsel|sidikov@gmail.com|qwerty007|Programmer
+1|Marsel|sidikov@gmail.com|qwerty007|Programmer
+2|Roman|roman@gmail.com|qwerty008|Student
+3|Alexey|alexey@gmail.com|qwerty009|Student

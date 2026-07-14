@@ -16,8 +16,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void signUp(String email, String password, String profileDescription) {
-        User user = new User(email, password, profileDescription);
+    public void signUp(String name, String email, String password, String profileDescription) {
+        User user = new User(name, email, password, profileDescription);
         userRepository.save(user);
     }
 

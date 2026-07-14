@@ -11,10 +11,10 @@ import javax.sql.DataSource;
 public class Main {
     public static void main(String[] args) {
 
-        String url = "jdbc:postgresql://localhost:5432/users_db";
+        String url = "jdbc:postgresql://localhost:5432/shop_db";
         String username = "postgres";
         String password = "12345";
-        String tableName = "users_with_names";
+        String tableName = "Product";
 
         DataSource dataSource = new DriverManagerDataSource(url, username, password, tableName);
 

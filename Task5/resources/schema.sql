@@ -1,4 +1,4 @@
-create table users_with_names (
+create table Product (
 	id serial unique not null,
 	name char(20) not null,
 	email char(20) not null,

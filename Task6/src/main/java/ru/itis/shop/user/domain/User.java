@@ -23,12 +23,6 @@ public class User {
         this.profileDescription = profileDescription;
     }
 
-    public User(String email, String password, String profileDescription) {
-        this.email = email;
-        this.password = password;
-        this.profileDescription = profileDescription;
-    }
-
     public Integer getId() {
         return id;
     }

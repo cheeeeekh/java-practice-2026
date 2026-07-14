@@ -3,7 +3,7 @@ package ru.itis.shop.app;
 import ru.itis.shop.user.api.UserConsoleOperations;
 import ru.itis.shop.user.application.UserService;
 import ru.itis.shop.user.infrastructure.persistence.UserFileRepository;
-import ru.itis.shop.user.infrastructure.persistence.UserMapper;
+import ru.itis.shop.user.infrastructure.persistence.mapper.UserMapper;
 
 public class Main {
     public static void main(String[] args) {

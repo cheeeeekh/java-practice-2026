@@ -1,4 +1,4 @@
-package ru.itis.shop.user.infrastructure.persistence;
+package ru.itis.shop.user.infrastructure.persistence.mapper;
 
 import ru.itis.shop.user.domain.User;
 
