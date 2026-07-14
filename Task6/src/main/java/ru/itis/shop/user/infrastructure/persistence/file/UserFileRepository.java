@@ -21,8 +21,8 @@ public class UserFileRepository implements UserRepository {
     @Override
     public void save(User user) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true))) {
-            String id = UUID.randomUUID().toString();
-            user.setId(Integer.valueOf(id));
+            int newId = generateNewId();
+            user.setId(newId);
             writer.write(userMapper.toLine(user));
             writer.newLine();
         } catch (IOException e) {
@@ -137,5 +137,14 @@ public class UserFileRepository implements UserRepository {
     public List<User> findAllByProfileDescription(String profileDescription) {
         System.out.println("Метод findAllByProfileDescription() не реализован в файловой версии. Используйте JDBC версию.");
         return List.of();
+    }
+
+    private int generateNewId() {
+        List<User> allUsers = findAll();
+        int maxId = allUsers.stream()
+                .mapToInt(User::getId)
+                .max()
+                .orElse(0);
+        return maxId + 1;
     }
 }
