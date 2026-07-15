@@ -135,8 +135,27 @@ public class UserFileRepository implements UserRepository {
 
     @Override
     public List<User> findAllByProfileDescription(String profileDescription) {
-        System.out.println("Метод findAllByProfileDescription() не реализован в файловой версии. Используйте JDBC версию.");
-        return List.of();
+        List<User> users = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line = reader.readLine();
+
+            while (line != null) {
+                User user = userMapper.fromLine(line);
+                if (user.getProfileDescription().equals(profileDescription)) {
+                    users.add(user);
+                }
+                line = reader.readLine();
+            }
+
+        } catch (FileNotFoundException e) {
+            // Если файл не существует, возвращаем пустой список
+            System.err.println("Файл пользователей не найден: " + fileName + "!");
+        } catch (IOException e) {
+            throw new IllegalStateException("Ошибка при чтении файла пользователей!", e);
+        }
+
+        return users;
     }
 
     private int generateNewId() {
